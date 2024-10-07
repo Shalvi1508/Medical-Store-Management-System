@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Customer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-box">
+        <h1>Create Customer</h1>
+        <!-- Single form element for submitting data -->
+        <form id="create-form" action="/post" method="post">
+          <div class="input-box">
+            <label for="create_customer_id">Customer ID (e.g., CUST001)</label>
+            <input
+              type="text"
+              id="create_customer_id"
+              name="Customer_ID"
+              required
+            />
+            <small id="create_customer_id_error"></small>
+          </div>
+
+          <div class="input-box">
+            <label for="create_customer_name">Customer Name</label>
+            <input
+              type="text"
+              id="create_customer_name"
+              name="Customer_name"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <label for="create_phone_number">Phone Number</label>
+            <input
+              type="text"
+              id="create_phone_number"
+              name="Phone_number"
+              required
+            />
+            <small id="create_phone_error"></small>
+          </div>
+
+          <div class="input-box">
+            <label for="create_email">Email ID (must be abc@gmail.com)</label>
+            <input type="email" id="create_email" name="Email_ID" required />
+            <small id="create_email_error"></small>
+          </div>
+
+          <button type="submit">Submit</button>
+          <div id="create_error-message"></div>
+        </form>
+        <button onclick="goBack()">Back to Customer Menu</button>
+      </div>
+    </div>
+
+    <script src="customer_script.js"></script>
+  </body>
+</html>
