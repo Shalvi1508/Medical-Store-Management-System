@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Pharmacists</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      input,
+      button {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pharmacist Management</h1>
+
+    <h2>Add Pharmacist</h2>
+    <form id="pharmacistForm">
+      <input
+        type="text"
+        id="pharmacist_id"
+        placeholder=" e.g. PHARM001"
+        required
+      /><br /><br />
+      <input
+        type="text"
+        id="pharmacist_name"
+        placeholder="Name e.g.John Doe"
+        required
+      /><br /><br />
+      <input
+        type="text"
+        id="phone_number"
+        placeholder="Phone Number"
+        required
+      /><br /><br />
+      <input
+        type="text"
+        id="address"
+        placeholder="Address"
+        required
+      /><br /><br />
+      <button type="submit">Save Pharmacist</button>
+    </form>
+
+    <h2>Pharmacist List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Pharmacist ID</th>
+          <th>Pharmacist Name</th>
+          <th>Phone Number</th>
+          <th>Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="pharmacistTable"></tbody>
+    </table>
+
+    <script src="pharmacist.js"></script>
+  </body>
+</html>
